@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.divFoto{
+    position: absolute;
+    height: 400px;
+    width: 700px;
+}
+
+.urna {
+    position: absolute;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.keys {
+    position: absolute;
+    right: 250px;
+    top: 280px;
+    background-color: rgb(43, 43, 43);
+    height: 300px;
+    width: 280px;
+}
+
+.click {
+    opacity: 1;
+    background-color: white;
+    animation: click 0.2s linear;
+}
+
+@keyframes click {
+    100% {
+        opacity: 0.3;
+    }
+}

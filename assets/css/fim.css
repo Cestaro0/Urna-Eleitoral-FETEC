@@ -1,0 +1,95 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.animacaoFim {
+  width: 550px;
+  height: 380px;
+  margin-top: 50px;
+  border-radius: 5px;
+  position: relative;
+}
+.loading {
+  width: 550px;
+  height: 380px;
+  position: absolute;
+  margin: 140px 55px;
+  opacity: 0;
+}
+.loading label {
+  font-weight: 500;
+  animation: piscar 0.6s infinite alternate;
+}
+.barra {
+  width: 406px;
+  padding: 3px;
+  height: 10px;
+  border: 1px solid black;
+}
+.carregado {
+  background: green;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+}
+.animateBarra {
+  animation: load .4s linear forwards;
+}
+@keyframes piscar {
+  0% {
+    color: black;
+  }
+  100% {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}
+@keyframes load {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 406px;
+  }
+}
+.telaFim {
+  position: absolute;
+  top: 30px;
+  height: 315px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background-color: white;
+}
+.telaFim .lblFim {
+  position: absolute;
+  left: 85px;
+  font-size: 200px;
+  font-family: sans-serif;
+  animation: piscar 0.9s infinite alternate;
+}
+.telaFim .lblVotou {
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 700;
+  position: absolute;
+  bottom: 5px;
+  right: 55px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.inputs {
+  position: absolute;
+  top: 150px;
+  left: 310px;
+}
+.inputs input {
+  height: 50px;
+  width: 30px;
+  text-align: center;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
